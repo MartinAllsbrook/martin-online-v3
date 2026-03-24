@@ -1,10 +1,54 @@
 @import "tailwindcss";
-.fresh-gradient {
-  background-color: rgb(134, 239, 172);
-  background-image: linear-gradient(
-    to right bottom,
-    rgb(219, 234, 254),
-    rgb(187, 247, 208),
-    rgb(254, 249, 195)
-  );
+
+@theme {
+    --font-sans: "Geist", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --font-display: din-2014, sans-serif;
+}
+
+@layer base {
+    ::-webkit-scrollbar {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        display: none;
+    }
+
+    html {
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    body{
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+
+        font-optical-sizing: auto;
+
+        @apply font-sans bg-neutral-900 text-neutral-50; 
+    }
+
+    h1 {
+        @apply font-display text-4xl;
+    }
+
+    h2 {
+        @apply font-display text-3xl;
+    }
+
+    h3 {
+        @apply font-display text-2xl;
+    }
+    
+    h4 {
+        @apply font-mono text-xl;
+    }
+
+    h5 {
+        @apply font-mono text-lg;
+    }
+    
+    a {
+        @apply hover:underline decoration-[0.5px] decoration-gray-500 underline-offset-3;
+    }
 }

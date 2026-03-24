@@ -15,6 +15,8 @@ export default define.page(function Home(_ctx) {
       </Head>
       <div class="">
         <h1>Welcome to Martin Allsbrook's Portfolio</h1>
+        <h2>This is an h2</h2>
+        <p>This is a paragraph.</p>
       </div>
     </div>
   );
