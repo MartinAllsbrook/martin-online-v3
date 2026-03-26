@@ -25,19 +25,19 @@ export const handler = define.handlers({
 
 export default define.page(function Work({ data }: PageProps<ExpectedData>) {
     return (
-        <div>
-            <PageWrap index={[]}>
-                <h1>Work</h1>
-                {data?.docs.map((post) => (
-                    <div key={post.id}>
-                        <a href={`/work/${post.slug}`}>
-                            <h2>{post.title}</h2>
-                            <img src={`http://localhost:3000${post.featuredImage.url}`} alt={post.featuredImage.alt} />
-                        </a>
-                    </div>
-                ))}
-            </PageWrap>
-            
-        </div>
+        <PageWrap head={{
+            title: "Work - Martin Allsbrook",
+            description: "A selection of projects I've worked on, including games, web development, 3d art, and design."
+        }} index={[]}>
+            <h1>Work</h1>
+            {data?.docs.map((post) => (
+                <div key={post.id}>
+                    <a href={`/work/${post.slug}`}>
+                        <h2>{post.title}</h2>
+                        <img src={`http://localhost:3000${post.featuredImage.url}`} alt={post.featuredImage.alt} />
+                    </a>
+                </div>
+            ))}
+        </PageWrap>
     );
 });

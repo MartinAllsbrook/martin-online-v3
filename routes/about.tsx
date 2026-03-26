@@ -1,4 +1,3 @@
-import { Head } from "fresh/runtime";
 import { PageProps } from "fresh";
 import { define } from "../utils.ts";
 import PageWrap from "../components/PageWrap.tsx";
@@ -21,14 +20,7 @@ export const handler = define.handlers({
 export default define.page(function About({ data }: PageProps<MediaData>) {
     return (
         <div class="">
-            <Head>
-                <title>About - Martin Allsbrook</title>
-                <meta 
-                    name="description" 
-                    content="Martin Allsbrook is a developer & 3d artist based in Brooklyn, NY."
-                />
-            </Head>
-            <PageWrap index={[]}>
+            <PageWrap head = {{ title: "About - Martin Allsbrook" }} index={[]}>
                 <h1>About</h1>
                 <img src={`http://localhost:3000${data?.url}`} alt={data?.alt} />
             </PageWrap>

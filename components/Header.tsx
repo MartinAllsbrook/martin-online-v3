@@ -1,7 +1,4 @@
-interface LinkInfo {
-    name: string;
-    href: string;
-}
+import LinkInfo from "src/types/LinkInfo.ts";
 
 export default function Header({ index }: { index: LinkInfo[] }) {
     return (
@@ -14,7 +11,9 @@ export default function Header({ index }: { index: LinkInfo[] }) {
             <div class="absolute pt-4">
                 {index.map((link) => (
                     <h5 key={link.href}>
-                        <a href={link.href}>{link.name}</a>
+                        <a href={link.href} target={link.external ? "_blank" : "_self"} rel={link.external ? "noopener noreferrer" : undefined}>
+                            {link.name}
+                        </a>
                     </h5>
                 ))}
             </div>
