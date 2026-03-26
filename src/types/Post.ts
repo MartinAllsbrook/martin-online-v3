@@ -12,11 +12,11 @@ export default interface Post {
         url: string;
         alt: string;
     };
-    content: (Heading | SubHeading | Paragraph | Image)[];
+    content: (Heading | SubHeading | Paragraph | Images)[];
 }
 
 export interface Block {
-    blockType: "heading" | "subheading" | "paragraph" | "image";
+    blockType: "heading" | "subheading" | "paragraph" | "images";
 }
 
 export interface Heading extends Block {
@@ -45,10 +45,12 @@ export interface Paragraph extends Block {
     }
 }
 
-export interface Image extends Block {
-    image: {
-        alt: string;
-        url: string;
-    }
-    caption?: string;
+export interface Images extends Block {
+    images: {
+        image: {
+            alt: string;
+            url: string;
+        };
+        caption?: string;
+    }[];
 }

@@ -1,11 +1,11 @@
 {
     "docs": [
         {
-            "id": 1,
-            "title": "Test Post One",
-            "slug": "test-post-one",
+            "id": 2,
+            "title": "Xenoplanet",
+            "slug": "xenoplanet",
             "status": "published",
-            "publishedAt": "2026-03-26T15:45:32.004Z",
+            "publishedAt": "2026-03-26T16:33:51.562Z",
             "author": 1,
             "tags": [
                 "work",
@@ -13,21 +13,21 @@
                 "coding"
             ],
             "featuredImage": {
-                "id": 1,
-                "alt": "Orange Cat",
-                "updatedAt": "2026-03-26T15:34:43.172Z",
-                "createdAt": "2026-03-26T15:34:43.172Z",
-                "url": "/api/media/file/orange-cat-cat.gif",
+                "id": 2,
+                "alt": "Robot protagonist from Xenoplanet aiming at an enemy in the distance",
+                "updatedAt": "2026-03-26T16:28:55.873Z",
+                "createdAt": "2026-03-26T16:28:55.873Z",
+                "url": "/api/media/file/aiming-at-enemy.png",
                 "thumbnailURL": null,
-                "filename": "orange-cat-cat.gif",
-                "mimeType": "image/gif",
-                "filesize": 405296,
-                "width": 220,
-                "height": 170
+                "filename": "aiming-at-enemy.png",
+                "mimeType": "image/png",
+                "filesize": 3842241,
+                "width": 2559,
+                "height": 1258
             },
             "content": [
                 {
-                    "id": "69c5542fcf4290a8d4e6dfe8",
+                    "id": "69c55edfcf4290a8d4e6dff2",
                     "text": {
                         "root": {
                             "children": [
@@ -38,7 +38,7 @@
                                             "format": 0,
                                             "mode": "normal",
                                             "style": "",
-                                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                            "text": "Xenoplanet is a beautiful open-world adventure game that takes place in a procedurally generated environment. My contributions to Xenonplanet include developing the game’s real time procedural generation systems from the ground up. Designing and implementing combat mechanics and enemy AI that aligned with our desired aesthetics. As well as designing and scripting various mechanics such as the inventory system, world interactions, item drops and more.",
                                             "type": "text",
                                             "version": 1
                                         }
@@ -63,13 +63,142 @@
                     "blockType": "paragraph"
                 },
                 {
-                    "id": "69c5547dcf4290a8d4e6dfea",
-                    "text": "Process",
+                    "id": "69c55ed6cf4290a8d4e6dff0",
+                    "text": "Gallery",
                     "blockName": null,
                     "blockType": "heading"
                 },
                 {
-                    "id": "69c5548ccf4290a8d4e6dfec",
+                    "id": "69c5688f3644d12223de5fe0",
+                    "blockName": null,
+                    "images": [
+                        {
+                            "id": "69c568aa3644d12223de5fe6",
+                            "image": {
+                                "id": 3,
+                                "alt": "A glowing temple at night, randomly placed in the environment",
+                                "updatedAt": "2026-03-26T16:30:28.909Z",
+                                "createdAt": "2026-03-26T16:30:28.909Z",
+                                "url": "/api/media/file/temple-at-night-cropped.png",
+                                "thumbnailURL": null,
+                                "filename": "temple-at-night-cropped.png",
+                                "mimeType": "image/png",
+                                "filesize": 1694596,
+                                "width": 1590,
+                                "height": 894
+                            },
+                            "caption": null
+                        },
+                        {
+                            "id": "69c568b83644d12223de5fe8",
+                            "image": {
+                                "id": 4,
+                                "alt": "A house next to a tree, with various plants and props around it",
+                                "updatedAt": "2026-03-26T16:30:56.114Z",
+                                "createdAt": "2026-03-26T16:30:56.114Z",
+                                "url": "/api/media/file/tree-and-house-cropped.png",
+                                "thumbnailURL": null,
+                                "filename": "tree-and-house-cropped.png",
+                                "mimeType": "image/png",
+                                "filesize": 2003471,
+                                "width": 1592,
+                                "height": 895
+                            },
+                            "caption": null
+                        }
+                    ],
+                    "blockType": "images"
+                },
+                {
+                    "id": "69c568a23644d12223de5fe2",
+                    "blockName": null,
+                    "images": [
+                        {
+                            "id": "69c568c03644d12223de5fea",
+                            "image": {
+                                "id": 5,
+                                "alt": "The player hiding from two nearby enemies behind a rock",
+                                "updatedAt": "2026-03-26T16:31:16.985Z",
+                                "createdAt": "2026-03-26T16:31:16.985Z",
+                                "url": "/api/media/file/hiding.png",
+                                "thumbnailURL": null,
+                                "filename": "hiding.png",
+                                "mimeType": "image/png",
+                                "filesize": 2675972,
+                                "width": 2559,
+                                "height": 1259
+                            },
+                            "caption": null
+                        },
+                        {
+                            "id": "69c568c23644d12223de5fec",
+                            "image": {
+                                "id": 6,
+                                "alt": "The player looking at the enemy that killed them while entering the dead screen",
+                                "updatedAt": "2026-03-26T16:31:44.182Z",
+                                "createdAt": "2026-03-26T16:31:44.182Z",
+                                "url": "/api/media/file/killed-by-enemy.png",
+                                "thumbnailURL": null,
+                                "filename": "killed-by-enemy.png",
+                                "mimeType": "image/png",
+                                "filesize": 1920143,
+                                "width": 2560,
+                                "height": 1259
+                            },
+                            "caption": null
+                        }
+                    ],
+                    "blockType": "images"
+                },
+                {
+                    "id": "69c568a73644d12223de5fe4",
+                    "blockName": null,
+                    "images": [
+                        {
+                            "id": "69c568c43644d12223de5fee",
+                            "image": {
+                                "id": 8,
+                                "alt": "Top down view of a campfire in a forest clearing",
+                                "updatedAt": "2026-03-26T16:32:15.427Z",
+                                "createdAt": "2026-03-26T16:32:15.427Z",
+                                "url": "/api/media/file/forest-and-campfire.png",
+                                "thumbnailURL": null,
+                                "filename": "forest-and-campfire.png",
+                                "mimeType": "image/png",
+                                "filesize": 3519472,
+                                "width": 1647,
+                                "height": 907
+                            },
+                            "caption": null
+                        },
+                        {
+                            "id": "69c568c63644d12223de5ff0",
+                            "image": {
+                                "id": 7,
+                                "alt": "A forest with tall trees and a temple in the background",
+                                "updatedAt": "2026-03-26T16:32:00.530Z",
+                                "createdAt": "2026-03-26T16:32:00.530Z",
+                                "url": "/api/media/file/forest-2-cropped.png",
+                                "thumbnailURL": null,
+                                "filename": "forest-2-cropped.png",
+                                "mimeType": "image/png",
+                                "filesize": 1945576,
+                                "width": 1587,
+                                "height": 893
+                            },
+                            "caption": null
+                        }
+                    ],
+                    "blockType": "images"
+                },
+                {
+                    "id": "69c55f97cf4290a8d4e6e002",
+                    "text": "Technical Challenges",
+                    "blockName": null,
+                    "blockType": "heading"
+                },
+                {
+                    "id": "69c55f9dcf4290a8d4e6e004",
                     "text": {
                         "root": {
                             "children": [
@@ -80,7 +209,163 @@
                                             "format": 0,
                                             "mode": "normal",
                                             "style": "",
-                                            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+                                            "text": "To create Xenoplanet’s infinite world new chunks have to constantly be loaded around the player, and there are two major challenges I had to overcome to achieve this. Firstly, the computation time needed to generate the noise maps and mesh data for a chunk are greater than the length of a frame, causing stuttering when new chunks are generated. Secondly, Unity's `instantiate` method is slow and impractical for placing the amount of objects we’ll need to place so we have to find a work around that avoids calling the method.",
+                                            "type": "text",
+                                            "version": 1
+                                        }
+                                    ],
+                                    "direction": null,
+                                    "format": "",
+                                    "indent": 0,
+                                    "type": "paragraph",
+                                    "version": 1,
+                                    "textFormat": 0,
+                                    "textStyle": ""
+                                }
+                            ],
+                            "direction": null,
+                            "format": "",
+                            "indent": 0,
+                            "type": "root",
+                            "version": 1
+                        }
+                    },
+                    "blockName": null,
+                    "blockType": "paragraph"
+                },
+                {
+                    "id": "69c55fa1cf4290a8d4e6e006",
+                    "text": "Computation",
+                    "blockName": null,
+                    "blockType": "subheading"
+                },
+                {
+                    "id": "69c55fa9cf4290a8d4e6e008",
+                    "text": {
+                        "root": {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "detail": 0,
+                                            "format": 0,
+                                            "mode": "normal",
+                                            "style": "",
+                                            "text": "CPUs are extremely fast but they can generally only do one thing at a time. This causes problems for us when we want to do large calculations, like the generation of a noise map, because the CPU has to finish the entire calculation before it can move on to rendering the next frame of our game. When the CPU isn't ready to start rendering the next frame in time the player experiences lag.",
+                                            "type": "text",
+                                            "version": 1
+                                        }
+                                    ],
+                                    "direction": null,
+                                    "format": "",
+                                    "indent": 0,
+                                    "type": "paragraph",
+                                    "version": 1,
+                                    "textFormat": 0,
+                                    "textStyle": ""
+                                }
+                            ],
+                            "direction": null,
+                            "format": "",
+                            "indent": 0,
+                            "type": "root",
+                            "version": 1
+                        }
+                    },
+                    "blockName": null,
+                    "blockType": "paragraph"
+                },
+                {
+                    "id": "69c55fb4cf4290a8d4e6e00a",
+                    "text": {
+                        "root": {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "detail": 0,
+                                            "format": 0,
+                                            "mode": "normal",
+                                            "style": "",
+                                            "text": "If we’re trying to hit a target of 60 fps we have 16.6ms to get all our calculations done before the next frame. And our main game loop and rendering may only take 2-6ms, leaving us with more than 10ms of extra time each frame. This might not seem like much, but that’s more than half a second of free computation for every second that passes in the game! I was able to leverage this extra time by breaking up large calculations into smaller chunks that run during this extra time. Now a calculation that may have taken longer than a frame can still be performed without the player noticing any lag!",
+                                            "type": "text",
+                                            "version": 1
+                                        }
+                                    ],
+                                    "direction": null,
+                                    "format": "",
+                                    "indent": 0,
+                                    "type": "paragraph",
+                                    "version": 1,
+                                    "textFormat": 0,
+                                    "textStyle": ""
+                                }
+                            ],
+                            "direction": null,
+                            "format": "",
+                            "indent": 0,
+                            "type": "root",
+                            "version": 1
+                        }
+                    },
+                    "blockName": null,
+                    "blockType": "paragraph"
+                },
+                {
+                    "id": "69c55fc8cf4290a8d4e6e010",
+                    "text": "Instantiation",
+                    "blockName": null,
+                    "blockType": "subheading"
+                },
+                {
+                    "id": "69c55fbacf4290a8d4e6e00c",
+                    "text": {
+                        "root": {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "detail": 0,
+                                            "format": 0,
+                                            "mode": "normal",
+                                            "style": "",
+                                            "text": "Each chunk in Xenoplanet needed to be populated with 4096 grass objects placed at specific heights and orientations. Unfortunately, Unity’s Instantiate method, used to create new objects, is notoriously slow. This created a unique challenge, as even if I broke up the grass instantiation over multiple frames it would take an impractical amount of time, more than the extra time we have available each frame.",
+                                            "type": "text",
+                                            "version": 1
+                                        }
+                                    ],
+                                    "direction": null,
+                                    "format": "",
+                                    "indent": 0,
+                                    "type": "paragraph",
+                                    "version": 1,
+                                    "textFormat": 0,
+                                    "textStyle": ""
+                                }
+                            ],
+                            "direction": null,
+                            "format": "",
+                            "indent": 0,
+                            "type": "root",
+                            "version": 1
+                        }
+                    },
+                    "blockName": null,
+                    "blockType": "paragraph"
+                },
+                {
+                    "id": "69c55fc2cf4290a8d4e6e00e",
+                    "text": {
+                        "root": {
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "detail": 0,
+                                            "format": 0,
+                                            "mode": "normal",
+                                            "style": "",
+                                            "text": "The solution I found for this was to use object pooling. Rather than instantiating a new set of grass on each chunk I loaded the scene with 25 objects, each containing one set of 4096 grass objects. I could then reuse these 25 objects by moving them to the 5x5 area of chunks closed to the player. This achieved the effect of making the infinite world seem covered in grass without ever having to use Unitie’s instantiate method.",
                                             "type": "text",
                                             "version": 1
                                         }
@@ -105,8 +390,8 @@
                     "blockType": "paragraph"
                 }
             ],
-            "updatedAt": "2026-03-26T15:49:58.667Z",
-            "createdAt": "2026-03-26T15:45:32.005Z"
+            "updatedAt": "2026-03-26T17:12:00.371Z",
+            "createdAt": "2026-03-26T16:33:51.564Z"
         }
     ],
     "hasNextPage": false,

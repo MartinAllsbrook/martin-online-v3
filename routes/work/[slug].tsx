@@ -1,11 +1,11 @@
 import { page, PageProps } from "fresh";
 import { define } from "@/utils.ts";
 import PageWrap from "components/PageWrap.tsx";
-import Post, { Heading, Image, Paragraph, SubHeading } from "src/types/Post.ts";
+import Post, { Heading, Images, Paragraph, SubHeading } from "src/types/Post.ts";
 import HeadingComponent from "components/post/Heading.tsx";
 import SubheadingComponent from "components/post/Subheading.tsx";
 import ParagraphComponent from "components/post/Paragraph.tsx";
-import ImageComponent from "components/post/ImageComponent.tsx";
+import ImagesComponent from "components/post/ImagesComponent.tsx";
 
 interface Data {
     post: Post;
@@ -39,8 +39,8 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
                                 return <SubheadingComponent key={index} subheading={block as SubHeading} />;
                             case "paragraph":
                                 return <ParagraphComponent key={index} paragraph={block as Paragraph} />
-                            case "image":
-                                return <ImageComponent key={index} image={block as Image} payloadUrl={payloadUrl} />;
+                            case "images":
+                                return <ImagesComponent key={index} imageSet={block as Images} payloadUrl={payloadUrl} />;
                             default:
                                 return null;
                         }
