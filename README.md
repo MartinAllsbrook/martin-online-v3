@@ -1,7 +1,16 @@
-# Fresh project
+# [martinallsbrook.com](https://martinallsbrook.com)
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+My personal site. If you want a site too let me know.
+
+### Tools
+
+- **Deno**: Runtime
+- **Fresh**: Framework
+- **Cloudflare Workers**: Hosting
+- **Preact**: HTML Rendering
+- **Tailwind**: Styling
+- **Payload CMS**: Content Management
+- **Cloudflare R2 & D1**: Content Storage
 
 ### Usage
 
