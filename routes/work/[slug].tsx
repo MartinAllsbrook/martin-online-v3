@@ -1,7 +1,11 @@
 import { page, PageProps } from "fresh";
 import { define } from "@/utils.ts";
-import PageWrap from "@/components/PageWrap.tsx";
-import Post, { Heading, Image, Paragraph, SubHeading } from "../../src/types/Post.ts";
+import PageWrap from "components/PageWrap.tsx";
+import Post, { Heading, Image, Paragraph, SubHeading } from "src/types/Post.ts";
+import HeadingComponent from "components/post/Heading.tsx";
+import SubheadingComponent from "components/post/Subheading.tsx";
+import ParagraphComponent from "components/post/Paragraph.tsx";
+import ImageComponent from "components/post/ImageComponent.tsx";
 
 interface Data {
     post: Post;
@@ -30,23 +34,13 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
                     {post?.content.map((block, index) => {
                         switch (block.blockType) {
                             case "heading":
-                                return <h2 key={index}>{(block as Heading).text}</h2>;
+                                return <HeadingComponent key={index} heading={block as Heading} />;
                             case "subheading":
-                                return <h3 key={index}>{(block as SubHeading).text}</h3>;
+                                return <SubheadingComponent key={index} subheading={block as SubHeading} />;
                             case "paragraph":
-                                return (
-                                    <p key={index}>
-                                        {(block as Paragraph).text.root.children[0].children[0].text}
-                                    </p>
-                                );
+                                return <ParagraphComponent key={index} paragraph={block as Paragraph} />
                             case "image":
-                                {
-                                    const imageBlock = block as Image;
-                                    return (<div key={index}>
-                                        <img src={`${payloadUrl}${imageBlock.url}`} alt={imageBlock.alt} />
-                                        {imageBlock.caption && <p>{imageBlock.caption}</p>}
-                                    </div>);
-                                }
+                                return <ImageComponent key={index} image={block as Image} payloadUrl={payloadUrl} />;
                             default:
                                 return null;
                         }

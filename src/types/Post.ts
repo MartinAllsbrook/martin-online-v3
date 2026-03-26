@@ -46,7 +46,9 @@ export interface Paragraph extends Block {
 }
 
 export interface Image extends Block {
-    url: string;
-    alt: string;
+    image: {
+        alt: string;
+        url: string;
+    }
     caption?: string;
 }
