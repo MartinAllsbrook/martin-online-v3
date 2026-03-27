@@ -49,7 +49,7 @@
     }
 
     p {
-        @apply text-base leading-relaxed tracking-normal;
+        @apply text-base leading-relaxed tracking-wide;
     }
     
     a {
