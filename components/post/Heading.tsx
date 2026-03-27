@@ -1,5 +1,7 @@
-import { Heading } from "src/types/Post.ts";
+import type { HeadingNode } from "src/types/Post.ts";
 
-export default function HeadingComponent({ heading }: { heading: Heading }) {
-    return <h2>{heading.text}</h2>;
+export default function HeadingComponent({ heading }: { heading: HeadingNode }) {
+    const Tag = heading.tag;
+    const text = heading.children.map((t) => t.text).join("");
+    return <Tag>{text}</Tag>;
 }

@@ -1,7 +1,7 @@
-import { Images } from "src/types/Post.ts";
+import { ImageSetBlock } from "src/types/Post.ts";
 
 interface ImagesComponentProps {
-    imageSet: Images;
+    imageSet: ImageSetBlock;
     payloadUrl: string;
 }
 

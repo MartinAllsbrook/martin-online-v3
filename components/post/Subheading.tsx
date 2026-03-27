@@ -1,5 +1,6 @@
-import { SubHeading } from "src/types/Post.ts";
+import type { HeadingNode } from "src/types/Post.ts";
 
-export default function SubheadingComponent({ subheading }: { subheading: SubHeading }) {
-    return <h3>{subheading.text}</h3>;
+export default function SubheadingComponent({ subheading }: { subheading: HeadingNode }) {
+    const text = subheading.children.map((t) => t.text).join("");
+    return <h3>{text}</h3>;
 }
