@@ -11,8 +11,8 @@ export default function ImagesComponent({ imageSet, payloadUrl }: ImagesComponen
             {
                 imageSet.images.map((img, index) => (
                     <div key={index}>
-                        <img src={`${payloadUrl}${img.image.url}`} alt={img.image.alt} />
-                        {img.caption && <p>{img.caption}</p>}
+                        <img class="my-2" src={`${payloadUrl}${img.image.url}`} alt={img.image.alt} />
+                        {img.caption && <p class="mb-2 font-light text-neutral-300">{img.caption}</p>}
                     </div>
                 ))
             }

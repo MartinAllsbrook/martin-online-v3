@@ -40,16 +40,16 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
     const { post, payloadUrl } = data;
     return (
         <div>
-            <PageWrap index={[]}>
-                <h1>{post?.title}</h1>
-                <img src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
-                <div>
-                    {post?.sections.map((section) =>
-                        section.content.root.children.map((node, index) =>
-                            renderNode(node, index, payloadUrl)
-                        )
-                    )}
-                </div>
+            <PageWrap index={[
+                { name: "back", href: "./" },
+            ]}>
+                <h1 class="mb-4">{post?.title}</h1>
+                <img class="mb-4" src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
+                {post?.sections.map((section) =>
+                    section.content.root.children.map((node, index) =>
+                        renderNode(node, index, payloadUrl)
+                    )
+                )}
             </PageWrap>
         </div>
     );

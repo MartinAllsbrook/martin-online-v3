@@ -30,16 +30,16 @@ export default function PageWrap({ children, index, head }: PageWrapProps) {
 
             {/* Page Content */}
             <div class="relative max-w-screen">
-                <div class="mx-8 relative min-h-screen">
+                <div class="mx-8 flex flex-col min-h-screen">
                     <Header index={index} />
-                    <div class="flex flex-row relative">
+                    <div class="flex flex-row relative flex-1">
                         <div class="grow flex-1">
                             {/* Left spacer */}
                         </div>
-                        <div class="flex flex-col w-3xl">
+                        <main class="flex flex-col w-3xl">
                             {/* Main Content */}
                             {children}
-                        </div>
+                        </main>
                         <div class="grow flex-1">
                             {/* Right spacer */}
                         </div>

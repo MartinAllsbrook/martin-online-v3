@@ -47,6 +47,10 @@
     h5 {
         @apply font-mono text-lg;
     }
+
+    p {
+        @apply text-base leading-relaxed tracking-normal;
+    }
     
     a {
         @apply 
