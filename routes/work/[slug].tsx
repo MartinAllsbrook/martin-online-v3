@@ -45,10 +45,8 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
             ]}>
                 <h1 class="mb-4">{post?.title}</h1>
                 <img class="mb-4" src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
-                {post?.sections.map((section) =>
-                    section.content.root.children.map((node, index) =>
-                        renderNode(node, index, payloadUrl)
-                    )
+                {post?.content.root.children.map((node, index) =>
+                    renderNode(node, index, payloadUrl)
                 )}
             </PageWrap>
         </div>

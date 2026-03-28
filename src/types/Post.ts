@@ -12,9 +12,14 @@ export interface Post {
     createdAt: string;
 
     featuredImage: Image;
-    sections: Section[];
+    content: Content;
     seo: SEO;
 }
+
+export interface Content {
+    root: RootNode;
+}
+
 
 export interface Collaborator {
     id: string;
@@ -45,13 +50,6 @@ export interface SEO {
 }
 
 // --- Sections & Rich Text (Lexical editor format) ---
-
-export interface Section {
-    id: string;
-    content: {
-        root: RootNode;
-    };
-}
 
 export interface RootNode {
     type: "root";

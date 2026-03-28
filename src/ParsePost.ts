@@ -3,10 +3,10 @@ import type {
     Collaborator,
     Image,
     SEO,
-    Section,
     BlockLevelNode,
     TextNode,
     ImageSetItem,
+    Content,
 } from "./types/Post.ts";
 
 // deno-lint-ignore no-explicit-any
@@ -106,18 +106,15 @@ function parseBlockLevelNode(raw: Raw): BlockLevelNode {
     }
 }
 
-function parseSection(raw: Raw): Section {
+function parseContent(raw: Raw): Content {
     return {
-        id: raw.id,
-        content: {
-            root: {
-                type: "root",
-                children: (raw.content.root.children as Raw[]).map(parseBlockLevelNode),
-                direction: raw.content.root.direction ?? null,
-                format: raw.content.root.format,
-                indent: raw.content.root.indent,
-                version: raw.content.root.version,
-            },
+        root: {
+            type: "root",
+            children: (raw.content.root.children as Raw[]).map(parseBlockLevelNode),
+            direction: raw.content.root.direction ?? null,
+            format: raw.content.root.format,
+            indent: raw.content.root.indent,
+            version: raw.content.root.version,
         },
     };
 }
@@ -136,7 +133,7 @@ export function parsePost(raw: Raw): Post {
         updatedAt: raw.updatedAt,
         createdAt: raw.createdAt,
         featuredImage: parseImage(raw.featuredImage),
-        sections: (raw.sections as Raw[]).map(parseSection),
+        content: parseContent(raw),
         seo: parseSEO(raw.seo),
     };
 }
