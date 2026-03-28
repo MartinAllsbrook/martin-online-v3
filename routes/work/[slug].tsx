@@ -6,6 +6,7 @@ import ParagraphComponent from "components/post/Paragraph.tsx";
 import ImagesComponent from "components/post/ImagesComponent.tsx";
 import { parsePostsResponse } from "src/ParsePost.ts";
 import type { Post, BlockLevelNode } from "src/types/Post.ts";
+import getEnvVar from "src/GetEnv.ts";
 
 interface Data {
     post: Post;
@@ -14,7 +15,8 @@ interface Data {
 
 export const handler = define.handlers({
     async GET(ctx) {
-        const payloadUrl = Deno.env.get("PAYLOAD_URL") ?? "";
+        const payloadUrl = await getEnvVar("PAYLOAD_URL") ?? "";
+        console.log("Payload URL:", payloadUrl);
         const slug = ctx.params.slug;
         const response = await fetch(`${payloadUrl}/api/posts?where[slug][equals]=${slug}&limit=1`);
         const json = await response.json();
