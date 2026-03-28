@@ -9,4 +9,9 @@ export default defineConfig({
     tailwindcss(),
     cloudflare(),
   ],
+  build: {
+    rollupOptions: {
+      external: ["cloudflare:workers"],
+    },
+  },
 });
