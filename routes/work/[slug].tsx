@@ -6,7 +6,7 @@ import ParagraphComponent from "components/post/Paragraph.tsx";
 import ImagesComponent from "components/post/ImagesComponent.tsx";
 import { parsePostsResponse } from "src/ParsePost.ts";
 import type { Post, BlockLevelNode } from "src/types/Post.ts";
-import getEnvVar from "src/GetEnv.ts";
+import getEnvVar, { getPayloadBinding } from "src/GetEnv.ts";
 
 interface Data {
     post: Post;
@@ -16,9 +16,13 @@ interface Data {
 export const handler = define.handlers({
     async GET(ctx) {
         const payloadUrl = await getEnvVar("PAYLOAD_URL") ?? "";
+        const binding = await getPayloadBinding();
         console.log("Payload URL:", payloadUrl);
         const slug = ctx.params.slug;
-        const response = await fetch(`${payloadUrl}/api/posts?where[slug][equals]=${slug}&limit=1`);
+        const response = await (binding ?? globalThis).fetch(`${payloadUrl}/api/posts?where[slug][equals]=${slug}&limit=1`);
+        if (!response.ok) {
+            throw new Error(`CMS responded ${response.status}: ${await response.text()}`);
+        }
         const json = await response.json();
         const [post] = parsePostsResponse(json);
         return page({ post, payloadUrl });

@@ -14,5 +14,11 @@
 
   "observability": {
     "enabled": true
-  }
+  },
+
+  // Service binding — routes fetch calls directly to the CMS worker
+  // without going through the public workers.dev URL (avoids error 1042)
+  "services": [
+    { "binding": "PAYLOAD_CMS", "service": "martin-online-cms" }
+  ]
 }

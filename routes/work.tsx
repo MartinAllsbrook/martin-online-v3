@@ -1,7 +1,7 @@
-import { PageProps } from "fresh";
+import { page, PageProps } from "fresh";
 import { define } from "../utils.ts";
 import PageWrap from "../components/PageWrap.tsx";
-import getEnvVar from "../src/GetEnv.ts";
+import getEnvVar, { getPayloadBinding } from "../src/GetEnv.ts";
 
 interface ExpectedData {
     docs: {
@@ -18,10 +18,14 @@ interface ExpectedData {
 export const handler = define.handlers({
     async GET(_ctx) {
         const payloadUrl = await getEnvVar("PAYLOAD_URL");
+        const binding = await getPayloadBinding();
         console.log("Fetching posts from:", `${payloadUrl}/api/posts`);
-        const response = await fetch(`${payloadUrl}/api/posts`);
+        const response = await (binding ?? globalThis).fetch(`${payloadUrl}/api/posts`);
+        if (!response.ok) {
+            throw new Error(`CMS responded ${response.status}: ${await response.text()}`);
+        }
         const data = await response.json();
-        return { data };
+        return page({ data });
     }
 });
 
