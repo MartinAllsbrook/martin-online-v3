@@ -24,8 +24,8 @@ export const handler = define.handlers({
         if (!response.ok) {
             throw new Error(`CMS responded ${response.status}: ${await response.text()}`);
         }
-        const data = await response.json();
-        return page({ data });
+        const data: ExpectedData = await response.json();
+        return page(data);
     }
 });
 
