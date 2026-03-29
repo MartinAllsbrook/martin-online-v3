@@ -18,9 +18,9 @@ interface ExpectedData {
 export const handler = define.handlers({
     async GET(_ctx) {
         const payloadUrl = await getEnvVar("PAYLOAD_URL");
+        console.log("Fetching posts from:", `${payloadUrl}/api/posts`);
         const response = await fetch(`${payloadUrl}/api/posts`);
         const data = await response.json();
-        console.log(data);
         return { data };
     }
 });
