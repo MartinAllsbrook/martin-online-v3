@@ -15,6 +15,8 @@ interface ExpectedData {
     }[];
 }
 
+
+// https://fresh.deno.dev/docs/concepts/data-fetching
 export const handler = define.handlers({
     async GET(_ctx) {
         const payloadUrl = await getEnvVar("PAYLOAD_URL");
