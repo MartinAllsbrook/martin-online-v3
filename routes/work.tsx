@@ -1,6 +1,7 @@
 import { PageProps } from "fresh";
 import { define } from "../utils.ts";
 import PageWrap from "../components/PageWrap.tsx";
+import getEnvVar from "../src/GetEnv.ts";
 
 interface ExpectedData {
     docs: {
@@ -16,7 +17,7 @@ interface ExpectedData {
 
 export const handler = define.handlers({
     async GET(_ctx) {
-        const payloadUrl = Deno.env.get("PAYLOAD_URL");
+        const payloadUrl = await getEnvVar("PAYLOAD_URL");
         const response = await fetch(`${payloadUrl}/api/posts`);
         const data = await response.json();
         return { data };
