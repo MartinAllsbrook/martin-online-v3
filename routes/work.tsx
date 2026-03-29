@@ -20,6 +20,7 @@ export const handler = define.handlers({
         const payloadUrl = await getEnvVar("PAYLOAD_URL");
         const response = await fetch(`${payloadUrl}/api/posts`);
         const data = await response.json();
+        console.log(data);
         return { data };
     }
 });
