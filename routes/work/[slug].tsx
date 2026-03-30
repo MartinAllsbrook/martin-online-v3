@@ -7,6 +7,7 @@ import ImagesComponent from "components/post/ImagesComponent.tsx";
 import { parsePostsResponse } from "src/ParsePost.ts";
 import type { Post, BlockLevelNode } from "src/types/Post.ts";
 import getEnvVar, { getPayloadBinding } from "src/GetEnv.ts";
+import PostInfo from "components/work/PostInfo.tsx";
 
 interface Data {
     post: Post;
@@ -49,8 +50,12 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
             <PageWrap index={[
                 { name: "back", href: "./" },
             ]}>
-                <h1 class="mb-4">{post?.title}</h1>
-                <img class="mb-4" src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
+                <div class="mb-4">
+                    <h1>{post?.title}</h1>
+                    <PostInfo category={post?.category} date={post?.date} />
+                </div>
+
+                <img class="my-2" src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
                 {post?.content.root.children.map((node, index) =>
                     renderNode(node, index, payloadUrl)
                 )}

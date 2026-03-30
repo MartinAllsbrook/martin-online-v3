@@ -4,6 +4,7 @@ import PageWrap from "../components/PageWrap.tsx";
 import getEnvVar, { getPayloadBinding } from "../src/GetEnv.ts";
 import { Post } from "src/types/Post.ts";
 import { parsePostsResponse } from "src/ParsePost.ts";
+import PostPreview from "components/work/PostPreview.tsx";
 
 interface ExpectedResponse {
     posts: Post[];
@@ -44,12 +45,7 @@ export default define.page(function Work({ data }: PageProps<Data>) {
         }} index={[]}>
             <h1>Work</h1>
             {data?.posts.map((post) => (
-                <div key={post.id}>
-                    <a href={`/work/${post.slug}`}>
-                        <h2>{post.title}</h2>
-                        <img src={`${data.payloadUrl}${post.featuredImage.url}`} alt={post.featuredImage.alt} />
-                    </a>
-                </div>
+                <PostPreview key={post.id} post={post} payloadUrl={data.payloadUrl} />
             ))}
         </PageWrap>
     );

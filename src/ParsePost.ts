@@ -125,6 +125,7 @@ export function parsePost(raw: Raw): Post {
         id: raw.id,
         title: raw.title,
         slug: raw.slug,
+        category: raw.category,
         date: raw.date,
         status: raw.status,
         tags: raw.tags ?? [],

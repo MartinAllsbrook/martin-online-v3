@@ -2,6 +2,7 @@ export interface Post {
     id: number;
     title: string;
     slug: string;
+    category: string;
     date: string;
     status: string;
     tags: string[];
