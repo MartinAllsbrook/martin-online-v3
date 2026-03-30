@@ -20,7 +20,7 @@ export const handler = define.handlers({
 export default define.page(function About({ data }: PageProps<MediaData>) {
     return (
         <div class="">
-            <PageWrap head = {{ title: "About - Martin Allsbrook" }} index={[]}>
+            <PageWrap head = {{ title: "About - Martin Allsbrook" }} index={[{ name: "back", href: "./" }]} route={[ { name: "about", href: "./about" } ]}>
                 <h1>About</h1>
                 <img src={`http://localhost:3000${data?.url}`} alt={data?.alt} />
             </PageWrap>
