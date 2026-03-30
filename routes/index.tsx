@@ -15,7 +15,8 @@ export default define.page(function Home(_ctx) {
             { name: "github", href: "https://github.com/martinallsbrook", external: true },
             { name: "linkedin", href: "https://www.linkedin.com/in/martin-allsbrook/", external: true },
             { name: "youtube", href: "https://www.youtube.com/@martinibomb", external: true },
-        ]}>
+        ]}
+        route={[]}>
             <div class="fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center text-center gap-4 bottom-0">
                 <h1>Martin Allsbrook</h1>
                 <h4>

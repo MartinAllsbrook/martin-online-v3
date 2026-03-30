@@ -1,11 +1,19 @@
 import LinkInfo from "src/types/LinkInfo.ts";
 
-export default function Header({ index }: { index: LinkInfo[] }) {
+export default function Header({ index, route }: { index: LinkInfo[], route: LinkInfo[] }) {
     return (
         <header class="mb-4 border-white border-b sticky top-0 z-10 bg-neutral-900/80 backdrop-blur-sm">
             <div class="py-4">
                 <h5 class="font-semibold">
                     <a href="https://martinallsbrook.com">martinallsbrook.com</a>
+                    {route.map((link) => (
+                        <>
+                            /
+                            <a href={link.href}>
+                                {link.name}
+                            </a>
+                        </>
+                    ))}
                 </h5>
             </div>
             <div class="absolute pt-4">

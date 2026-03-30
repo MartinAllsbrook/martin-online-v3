@@ -47,9 +47,19 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
     const { post, payloadUrl } = data;
     return (
         <div>
-            <PageWrap index={[
+            <PageWrap 
+            head={{
+                title: `${post.title} - Martin Allsbrook`,
+                description: post.seo.metaDescription || undefined,
+            }}
+            index={[
                 { name: "back", href: "./" },
+            ]}
+            route={[
+                { name: "work", href: "./" },
+                { name: post.slug, href: `./${post.slug}` }
             ]}>
+                
                 <div class="mb-4">
                     <h1>{post?.title}</h1>
                     <PostInfo category={post?.category} date={post?.date} />

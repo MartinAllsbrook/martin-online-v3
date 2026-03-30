@@ -10,9 +10,10 @@ interface PageWrapProps {
         description?: string;
     };
     index: LinkInfo[];
+    route: LinkInfo[];
 }
 
-export default function PageWrap({ children, index, head }: PageWrapProps) {
+export default function PageWrap({ children, index, route, head }: PageWrapProps) {
     return (
         <>
             {/* Head */}
@@ -25,13 +26,13 @@ export default function PageWrap({ children, index, head }: PageWrapProps) {
                         name="description" 
                         content={head.description} 
                     />
-                )}
+                )}                
             </Head>
 
             {/* Page Content */}
             <div class="relative max-w-screen">
                 <div class="mx-8 flex flex-col min-h-screen">
-                    <Header index={index} />
+                    <Header index={index} route={route} />
                     <div class="flex flex-row relative flex-1">
                         <div class="grow flex-1">
                             {/* Left spacer */}

@@ -38,11 +38,25 @@ export const handler = define.handlers({
 });
 
 export default define.page(function Work({ data }: PageProps<Data>) {
+    const indexLinks = [];
+
+    for (const post of data?.posts || []) {
+        indexLinks.push({ name: post.slug, href: `/work/${post.slug}` });
+    }
+
+    if (data?.posts.length > 0) {
+        indexLinks.push({ name: "back", href: "./" });
+    }
+
     return (
         <PageWrap head={{
             title: "Work - Martin Allsbrook",
             description: "A selection of projects I've worked on, including games, web development, 3d art, and design."
-        }} index={[]}>
+        }} 
+        index={indexLinks}
+        route={[
+            { name: "work", href: "./" }
+        ]}>
             <h1>Work</h1>
             {data?.posts.map((post) => (
                 <PostPreview key={post.id} post={post} payloadUrl={data.payloadUrl} />
