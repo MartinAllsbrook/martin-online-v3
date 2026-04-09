@@ -16,6 +16,10 @@
     "enabled": true
   },
 
+  "vars": {
+    "PAYLOAD_URL": "https://martin-online-cms.martin-allsbrook.workers.dev"
+  },
+
   // Service binding — routes fetch calls directly to the CMS worker
   // without going through the public workers.dev URL (avoids error 1042)
   "services": [

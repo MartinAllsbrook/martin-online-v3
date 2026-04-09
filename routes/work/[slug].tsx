@@ -20,10 +20,12 @@ export const handler = define.handlers({
         const binding = await getPayloadBinding();
         console.log("Payload URL:", payloadUrl);
         const slug = ctx.params.slug;
+        
         const response = await (binding ?? globalThis).fetch(`${payloadUrl}/api/posts?where[slug][equals]=${slug}&limit=1`);
         if (!response.ok) {
             throw new Error(`CMS responded ${response.status}: ${await response.text()}`);
         }
+
         const json = await response.json();
         const [post] = parsePostsResponse(json);
         return page({ post, payloadUrl });

@@ -29,7 +29,7 @@
     }
 
     h1 {
-        @apply font-display text-4xl uppercase;
+        @apply font-display text-5xl uppercase;
     }
 
     h2 {

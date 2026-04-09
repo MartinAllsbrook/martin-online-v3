@@ -20,13 +20,12 @@ interface Data {
 export const handler = define.handlers({
     async GET(_ctx) {
 
-        const payloadUrl = await getEnvVar("PAYLOAD_URL");
+        const payloadUrl = await getEnvVar("PAYLOAD_URL") ?? "";
         const binding = await getPayloadBinding();
         
         console.log("Fetching posts from:", `${payloadUrl}/api/posts`);
         
         const response = await (binding ?? globalThis).fetch(`${payloadUrl}/api/posts`);
-        
         if (!response.ok) {
             throw new Error(`CMS responded ${response.status}: ${await response.text()}`);
         }
@@ -38,13 +37,14 @@ export const handler = define.handlers({
 });
 
 export default define.page(function Work({ data }: PageProps<Data>) {
+    const { posts, payloadUrl } = data;
     const indexLinks = [];
 
-    for (const post of data?.posts || []) {
+    for (const post of posts || []) {
         indexLinks.push({ name: post.slug, href: `/work/${post.slug}` });
     }
 
-    if (data?.posts.length > 0) {
+    if (posts.length > 0) {
         indexLinks.push({ name: "back", href: "./" });
     }
 
@@ -58,8 +58,8 @@ export default define.page(function Work({ data }: PageProps<Data>) {
             { name: "work", href: "./" }
         ]}>
             <h1>Work</h1>
-            {data?.posts.map((post) => (
-                <PostPreview key={post.id} post={post} payloadUrl={data.payloadUrl} />
+            {posts.map((post) => (
+                <PostPreview key={post.id} post={post} payloadUrl={payloadUrl} />
             ))}
         </PageWrap>
     );
