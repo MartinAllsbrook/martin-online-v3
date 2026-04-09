@@ -1,4 +1,5 @@
 import { ImageSetBlock } from "src/types/Post.ts";
+import Image from "islands/Image.tsx";
 
 interface ImagesComponentProps {
     imageSet: ImageSetBlock;
@@ -11,7 +12,10 @@ export default function ImagesComponent({ imageSet, payloadUrl }: ImagesComponen
             {
                 imageSet.images.map((img, index) => (
                     <div key={index}>
-                        <img class="my-2" src={`${payloadUrl}${img.image.url}`} alt={img.image.alt} />
+                        <div class="my-2">
+                            <Image src={`${payloadUrl}${img.image.url}`} alt={img.image.alt} />
+                        </div>
+
                         {img.caption && <p class="mb-2 font-light text-neutral-300">{img.caption}</p>}
                     </div>
                 ))

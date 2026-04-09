@@ -8,6 +8,7 @@ import { parsePostsResponse } from "src/ParsePost.ts";
 import type { Post, BlockLevelNode } from "src/types/Post.ts";
 import getEnvVar, { getPayloadBinding } from "src/GetEnv.ts";
 import PostInfo from "components/work/PostInfo.tsx";
+import Image from "islands/Image.tsx";
 
 interface Data {
     post: Post;
@@ -67,7 +68,11 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
                     <PostInfo category={post?.category} date={post?.date} />
                 </div>
 
-                <img class="my-2" src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
+                <div class="my-2">
+                    <Image src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
+                </div>
+
+                {/* Render main post content! */}
                 {post?.content.root.children.map((node, index) =>
                     renderNode(node, index, payloadUrl)
                 )}
