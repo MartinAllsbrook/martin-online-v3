@@ -7,7 +7,7 @@ export default function PostPreview({ post, payloadUrl }: { post: Post; payloadU
         <div key={post.id} class="my-8">
             <a href={`/work/${post.slug}`} class="group no-underline">
                 <div class="my-2">
-                    <Image src={`${payloadUrl}${post.featuredImage.url}`} alt={post.featuredImage.alt} />
+                    <Image src={`${payloadUrl}${post.featuredImage.url}`} alt={post.featuredImage.alt} aspectRatio={post.featuredImage.aspectRatio?.toFixed(2) ?? undefined} />
                 </div>
                 <h2 class="group-hover:underline decoration-1 underline-offset-3">{post.title}</h2>
 

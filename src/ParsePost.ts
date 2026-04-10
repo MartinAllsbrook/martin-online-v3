@@ -16,6 +16,7 @@ function parseImage(raw: Raw): Image {
     return {
         id: raw.id,
         alt: raw.alt,
+        aspectRatio: raw.aspectRatio ?? null, // TODO: Should not have a null option eventually
         tags: raw.tags ?? [],
         url: raw.url,
         thumbnailURL: raw.thumbnailURL ?? null,

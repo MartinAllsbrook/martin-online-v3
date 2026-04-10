@@ -29,9 +29,11 @@ export interface Collaborator {
     link: string;
 }
 
+// TODO: Move this somewhere else eventually
 export interface Image {
     id: number;
     alt: string;
+    aspectRatio: number | null; // TODO: Should not have a null option eventually
     tags: string[];
     url: string;
     thumbnailURL: string | null;

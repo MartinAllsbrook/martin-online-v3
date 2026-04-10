@@ -69,7 +69,7 @@ export default define.page(function BlogPost({ data }: PageProps<Data>) {
                 </div>
 
                 <div class="my-2">
-                    <Image src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} />
+                    <Image src={`${payloadUrl}${post?.featuredImage.url}`} alt={post?.featuredImage.alt} aspectRatio={post.featuredImage.aspectRatio?.toFixed(2) ?? undefined}/>
                 </div>
 
                 {/* Render main post content! */}

@@ -2,10 +2,13 @@ import { useSignal } from "@preact/signals";
 import { useEffect, useRef } from "preact/hooks";
 
 interface ImageProps {
+    // Main Image info
     src: string;
     alt: string;
-    className?: string;
     aspectRatio?: string;
+
+    // Other stuff
+    className?: string;
     placeholder?: string;
     fallbackSrc?: string; // Fallback image if main src fails to load
 
@@ -19,8 +22,8 @@ interface ImageProps {
 export default function Image({
     src,
     alt,
+    aspectRatio = "1.7",
     className = "",
-    aspectRatio = "1/1",
     placeholder = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20400'%3e%3crect%20width='100%25'%20height='100%25'%20fill='%23262626'/%3e%3c/svg%3e",
     fallbackSrc,
     onError,
@@ -56,14 +59,12 @@ export default function Image({
     }, []);
 
     const handleLoad = () => {
-        console.log(`Image loaded: ${currentSrc.value}`);
         isLoaded.value = true;
         hasError.value = false;
         onLoad?.();
     };
 
     const handleError = () => {
-        console.error(`Failed to load image: ${currentSrc.value}`);
         hasError.value = true;
 
         // Try fallback if available and not already tried
@@ -78,11 +79,9 @@ export default function Image({
     };
 
     const handleClick = () => {
-        console.log(`Image clicked: ${currentSrc.value}`);
         onClick?.();
     };
 
-    console.log(`Rendering image: ${imageRef.current}, inView: ${isInView.value}`);
 
     return (
         <div
