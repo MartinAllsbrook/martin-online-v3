@@ -2,27 +2,23 @@
     "docs": [
         {
             "id": 1,
+            "_order": "a0",
             "title": "Final test",
             "slug": "final-test",
+            "category": "Game",
             "date": "2026-03-28T12:00:00.000Z",
-            "collaborators": [
-                {
-                    "id": "69c80980437c98fbc69507cf",
-                    "name": "Lucca Chiappetta",
-                    "role": "Codeveloper",
-                    "link": "https://www.luccachiappetta.com/"
-                }
-            ],
+            "collaborators": [],
             "status": "published",
             "publishedAt": "2026-03-28T17:10:24.014Z",
             "tags": [
-                "work"
+                "game"
             ],
             "featuredImage": {
                 "id": 3,
-                "alt": "forest and a campfire in the middle",
+                "alt": "forest and a campfire in the middle ",
                 "tags": [],
-                "updatedAt": "2026-03-27T19:35:00.237Z",
+                "aspectRatio": 1.8158765159867696,
+                "updatedAt": "2026-04-09T22:11:53.475Z",
                 "createdAt": "2026-03-27T19:35:00.237Z",
                 "url": "/api/media/file/forest-and-campfire.png",
                 "thumbnailURL": null,
@@ -86,9 +82,10 @@
                                         "id": "69c809bf437c98fbc69507d1",
                                         "image": {
                                             "id": 2,
-                                            "alt": "Forest!",
+                                            "alt": "Forest",
                                             "tags": [],
-                                            "updatedAt": "2026-03-27T19:34:35.556Z",
+                                            "aspectRatio": 1.7771556550951848,
+                                            "updatedAt": "2026-04-10T21:20:13.363Z",
                                             "createdAt": "2026-03-27T19:34:35.556Z",
                                             "url": "/api/media/file/forest-2-cropped.png",
                                             "thumbnailURL": null,
@@ -103,9 +100,10 @@
                                         "id": "69c809c5437c98fbc69507d3",
                                         "image": {
                                             "id": 1,
-                                            "alt": "Robot protagonist from Xenoplanet aiming at an enemy in the distance",
+                                            "alt": "Robot protagonist from Xenoplanet aiming at an enemy in the distance!",
                                             "tags": [],
-                                            "updatedAt": "2026-03-27T18:48:55.505Z",
+                                            "aspectRatio": 2.034181240063593,
+                                            "updatedAt": "2026-04-09T22:12:16.337Z",
                                             "createdAt": "2026-03-27T18:48:55.505Z",
                                             "url": "/api/media/file/aiming-at-enemy.png",
                                             "thumbnailURL": null,
@@ -236,6 +234,83 @@
                             "version": 1,
                             "textFormat": 0,
                             "textStyle": ""
+                        },
+                        {
+                            "type": "block",
+                            "version": 2,
+                            "format": "",
+                            "fields": {
+                                "id": "69cb1b2e1d45bb96be364ae3",
+                                "blockName": "",
+                                "images": [
+                                    {
+                                        "id": "69cb1b98ea8c8f7e2dd36121",
+                                        "image": {
+                                            "id": 2,
+                                            "alt": "Forest",
+                                            "tags": [],
+                                            "aspectRatio": 1.7771556550951848,
+                                            "updatedAt": "2026-04-10T21:20:13.363Z",
+                                            "createdAt": "2026-03-27T19:34:35.556Z",
+                                            "url": "/api/media/file/forest-2-cropped.png",
+                                            "thumbnailURL": null,
+                                            "filename": "forest-2-cropped.png",
+                                            "mimeType": "image/png",
+                                            "filesize": 1945576,
+                                            "width": 1587,
+                                            "height": 893
+                                        }
+                                    },
+                                    {
+                                        "id": "69cb1b9cea8c8f7e2dd36123",
+                                        "image": {
+                                            "id": 3,
+                                            "alt": "forest and a campfire in the middle ",
+                                            "tags": [],
+                                            "aspectRatio": 1.8158765159867696,
+                                            "updatedAt": "2026-04-09T22:11:53.475Z",
+                                            "createdAt": "2026-03-27T19:35:00.237Z",
+                                            "url": "/api/media/file/forest-and-campfire.png",
+                                            "thumbnailURL": null,
+                                            "filename": "forest-and-campfire.png",
+                                            "mimeType": "image/png",
+                                            "filesize": 3519472,
+                                            "width": 1647,
+                                            "height": 907
+                                        }
+                                    },
+                                    {
+                                        "id": "69cb1ba1ea8c8f7e2dd36125",
+                                        "image": {
+                                            "id": 1,
+                                            "alt": "Robot protagonist from Xenoplanet aiming at an enemy in the distance!",
+                                            "tags": [],
+                                            "aspectRatio": 2.034181240063593,
+                                            "updatedAt": "2026-04-09T22:12:16.337Z",
+                                            "createdAt": "2026-03-27T18:48:55.505Z",
+                                            "url": "/api/media/file/aiming-at-enemy.png",
+                                            "thumbnailURL": null,
+                                            "filename": "aiming-at-enemy.png",
+                                            "mimeType": "image/png",
+                                            "filesize": 3842241,
+                                            "width": 2559,
+                                            "height": 1258
+                                        }
+                                    }
+                                ],
+                                "force-aspect": 1.64,
+                                "blockType": "image-gallery"
+                            }
+                        },
+                        {
+                            "children": [],
+                            "direction": null,
+                            "format": "",
+                            "indent": 0,
+                            "type": "paragraph",
+                            "version": 1,
+                            "textFormat": 0,
+                            "textStyle": ""
                         }
                     ],
                     "direction": null,
@@ -250,7 +325,7 @@
                 "metaDescription": null,
                 "ogImage": null
             },
-            "updatedAt": "2026-03-28T17:10:34.491Z",
+            "updatedAt": "2026-03-31T00:56:23.169Z",
             "createdAt": "2026-03-28T17:10:24.017Z"
         }
     ],

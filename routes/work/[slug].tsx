@@ -9,6 +9,7 @@ import type { Post, BlockLevelNode } from "src/types/Post.ts";
 import getEnvVar, { getPayloadBinding } from "src/GetEnv.ts";
 import PostInfo from "components/work/PostInfo.tsx";
 import Image from "islands/Image.tsx";
+import ImageGallery from "components/post/ImageGallery.tsx";
 
 interface Data {
     post: Post;
@@ -40,7 +41,14 @@ function renderNode(node: BlockLevelNode, index: number, payloadUrl: string) {
         case "paragraph":
             return <ParagraphComponent key={index} paragraph={node} />;
         case "block":
-            return <ImagesComponent key={index} imageSet={node.fields} payloadUrl={payloadUrl} />;
+            {
+                if (node.fields.blockType === "image-set") {
+                    return <ImagesComponent key={index} imageSet={node.fields} payloadUrl={payloadUrl} />;
+                } else if (node.fields.blockType === "image-gallery") {
+                    return <ImageGallery key={index} images={node.fields.images} aspectRatio={node.fields.aspectRatio} payloadUrl={payloadUrl} />;
+                }
+                break;
+            }
         default:
             return null;
     }

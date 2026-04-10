@@ -90,18 +90,38 @@ function parseBlockLevelNode(raw: Raw): BlockLevelNode {
                 indent: raw.indent,
                 version: raw.version,
             };
-        case "block":
-            return {
-                type: "block",
-                format: raw.format,
-                version: raw.version,
-                fields: {
-                    id: raw.fields.id,
-                    blockType: raw.fields.blockType,
-                    blockName: raw.fields.blockName ?? "",
-                    images: (raw.fields.images as Raw[]).map(parseImageSetItem),
-                },
-            };
+        case "block": {
+            const blockType = raw.fields.blockType;
+            if (blockType === "image-set") {
+                return {
+                    type: "block",
+                    format: raw.format,
+                    version: raw.version,
+                    fields: {
+                        id: raw.fields.id,
+                        blockType: "image-set" as const,
+                        blockName: raw.fields.blockName ?? "",
+                        images: (raw.fields.images as Raw[]).map(parseImageSetItem),
+                    },
+                };
+            } else if (blockType === "image-gallery") {
+                return {
+                    type: "block",
+                    format: raw.format,
+                    version: raw.version,
+                    fields: {
+                        id: raw.fields.id,
+                        blockType: "image-gallery" as const,
+                        blockName: raw.fields.blockName ?? "",
+                        aspectRatio: raw.fields["force-aspect"] ?? 0, // TODO: Defaulting to 0?
+                        imagesPerRow: raw.fields["images-per-row"] ?? 0,
+                        images: (raw.fields.images as Raw[]).map(parseImageSetItem),
+                    },
+                };
+            } else {
+                throw new Error(`Unknown block type: "${blockType}"`);
+            }
+        }
         default:
             throw new Error(`Unknown block-level node type: "${raw.type}"`);
     }

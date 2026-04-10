@@ -102,9 +102,10 @@ export interface BlockNode {
     type: "block";
     format: string;
     version: number;
-    fields: ImageSetBlock; // extend as a union when more block types are added i.e. ImageSetBlock | VideoBlock | etc.
+    fields: ImageSetBlock | ImageGalleryBlock; // extend as a union when more block types are added i.e. ImageSetBlock | VideoBlock | etc.
 }
 
+// Image Set
 export interface ImageSetBlock {
     id: string;
     blockType: "image-set";
@@ -113,6 +114,22 @@ export interface ImageSetBlock {
 }
 
 export interface ImageSetItem {
+    id: string;
+    image: Image;
+    caption: string;
+}
+
+// Image Gallery
+export interface ImageGalleryBlock {
+    id: string;
+    blockType: "image-gallery";
+    blockName: string;
+    aspectRatio: number;
+    imagesPerRow: number;
+    images: ImageGalleryItem[];
+}
+
+export interface ImageGalleryItem {
     id: string;
     image: Image;
     caption: string;
