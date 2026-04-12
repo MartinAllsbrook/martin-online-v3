@@ -3,6 +3,7 @@ import { define } from "../utils.ts";
 import PageWrap from "../components/PageWrap.tsx";
 import { Image } from "src/types/Post.ts";
 import ImageComponent from "islands/Image.tsx";
+import getEnvVar, { getPayloadBinding } from "src/GetEnv.ts";
 
 interface MediaData {
     image: Image;
@@ -10,12 +11,18 @@ interface MediaData {
 }
 
 export const handler = define.handlers({
-    async GET(_ctx) {
-        const payloadUrl = Deno.env.get("PAYLOAD_URL");
-        const response = await fetch(`${payloadUrl}/api/media?where[tags][in]=about&limit=1`);
-        const data = await response.json();
-        console.log("data", data);
-        return page({ image: data?.docs?.[0], payloadUrl });
+    async GET(ctx) {
+        const payloadUrl = await getEnvVar("PAYLOAD_URL") ?? "";
+        const binding = await getPayloadBinding();
+        console.log("Payload URL:", payloadUrl);
+
+        const response = await (binding ?? globalThis).fetch(`${payloadUrl}/api/media?where[tags][in]=about&limit=1`);
+        if (!response.ok) {
+            throw new Error(`CMS responded ${response.status}: ${await response.text()}`);
+        }
+        
+        const json = await response.json();
+        return page({ image: json?.docs?.[0], payloadUrl });
     }
 });
 
