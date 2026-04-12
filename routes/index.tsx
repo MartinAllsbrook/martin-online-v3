@@ -20,7 +20,7 @@ export default define.page(function Home(_ctx) {
             <div class="fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center text-center gap-4 bottom-0">
                 <h1>Martin Allsbrook</h1>
                 <h4>
-                    <a href="work/games">Games</a> • <a href="work/web">Web</a> • <a href="work/3d">3D</a> • <a href="work/design">Design</a>
+                    <a href="work/">Games</a> • <a href="work/">Web</a> • <a href="work/">3D</a> • <a href="work/">Design</a>
                 </h4>
             </div>
         
