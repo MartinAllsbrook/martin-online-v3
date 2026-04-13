@@ -1,32 +1,33 @@
 {
     "docs": [
         {
-            "id": 1,
-            "_order": "a0",
-            "title": "Final test",
-            "slug": "final-test",
-            "category": "Game",
-            "date": "2026-03-28T12:00:00.000Z",
+            "id": 6,
+            "_order": "9z",
+            "title": "Isolation Proof Bottle",
+            "slug": "isolation-proof",
+            "category": "Renderings",
+            "date": "Feb 2026",
             "collaborators": [],
             "status": "published",
-            "publishedAt": "2026-03-28T17:10:24.014Z",
-            "tags": [
-                "game"
-            ],
+            "publishedAt": "2026-04-13T16:41:15.517Z",
+            "tags": [],
             "featuredImage": {
-                "id": 3,
-                "alt": "forest and a campfire in the middle ",
-                "tags": [],
-                "aspectRatio": 1.8158765159867696,
-                "updatedAt": "2026-04-09T22:11:53.475Z",
-                "createdAt": "2026-03-27T19:35:00.237Z",
-                "url": "/api/media/file/forest-and-campfire.png",
+                "id": 39,
+                "alt": "A simple rendering of the isolation proof bottle",
+                "tags": [
+                    "avif",
+                    "rendering"
+                ],
+                "aspectRatio": 1,
+                "updatedAt": "2026-04-13T16:46:45.241Z",
+                "createdAt": "2026-04-13T15:06:36.196Z",
+                "url": "/api/media/file/Main%20IP%20Render%20Square.avif",
                 "thumbnailURL": null,
-                "filename": "forest-and-campfire.png",
-                "mimeType": "image/png",
-                "filesize": 3519472,
-                "width": 1647,
-                "height": 907
+                "filename": "Main IP Render Square.avif",
+                "mimeType": "image/avif",
+                "filesize": 270911,
+                "width": 1650,
+                "height": 1650
             },
             "content": {
                 "root": {
@@ -38,7 +39,72 @@
                                     "format": 0,
                                     "mode": "normal",
                                     "style": "",
-                                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                                    "text": "In collaboration with ",
+                                    "type": "text",
+                                    "version": 1
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "detail": 0,
+                                            "format": 0,
+                                            "mode": "normal",
+                                            "style": "",
+                                            "text": "Laazy Studio",
+                                            "type": "text",
+                                            "version": 1
+                                        }
+                                    ],
+                                    "direction": null,
+                                    "format": "",
+                                    "indent": 0,
+                                    "type": "link",
+                                    "version": 3,
+                                    "fields": {
+                                        "url": "https://www.laazy.studio/",
+                                        "newTab": true,
+                                        "linkType": "custom"
+                                    },
+                                    "id": "69dd10aa1f96e82745a576af"
+                                },
+                                {
+                                    "detail": 0,
+                                    "format": 0,
+                                    "mode": "normal",
+                                    "style": "",
+                                    "text": ", I had the opportunity to lead the technical evolution of the new ",
+                                    "type": "text",
+                                    "version": 1
+                                },
+                                {
+                                    "children": [
+                                        {
+                                            "detail": 0,
+                                            "format": 0,
+                                            "mode": "normal",
+                                            "style": "",
+                                            "text": "Isolation Proof",
+                                            "type": "text",
+                                            "version": 1
+                                        }
+                                    ],
+                                    "direction": null,
+                                    "format": "",
+                                    "indent": 0,
+                                    "type": "link",
+                                    "version": 3,
+                                    "fields": {
+                                        "url": "https://www.isolationproof.com/",
+                                        "linkType": "custom"
+                                    },
+                                    "id": "69dd10e61f96e82745a576b0"
+                                },
+                                {
+                                    "detail": 0,
+                                    "format": 0,
+                                    "mode": "normal",
+                                    "style": "",
+                                    "text": " bottle design. I took the bottle from sketches from Laazy Studio's design team to a precision CAD model that served as the final production file for the manufacturer. A long the way I used Blender to produce high fidelity renderings of different design options for client approval. Lastly I developed a web integration with Three JS that let the model be displayed in real time 3D on Isolation Proof's website.",
                                     "type": "text",
                                     "version": 1
                                 }
@@ -52,67 +118,33 @@
                             "textStyle": ""
                         },
                         {
-                            "children": [
-                                {
-                                    "detail": 0,
-                                    "format": 0,
-                                    "mode": "normal",
-                                    "style": "",
-                                    "text": "Gallery",
-                                    "type": "text",
-                                    "version": 1
-                                }
-                            ],
-                            "direction": null,
-                            "format": "",
-                            "indent": 0,
-                            "type": "heading",
-                            "version": 1,
-                            "tag": "h2"
-                        },
-                        {
                             "type": "block",
                             "version": 2,
                             "format": "",
                             "fields": {
-                                "id": "69c809bd37d96ae685e06457",
+                                "id": "69dd14661f96e82745a576b3",
                                 "blockName": "",
                                 "images": [
                                     {
-                                        "id": "69c809bf437c98fbc69507d1",
+                                        "id": "69dd14691633bbd33e90832d",
                                         "image": {
-                                            "id": 2,
-                                            "alt": "Forest",
-                                            "tags": [],
-                                            "aspectRatio": 1.7771556550951848,
-                                            "updatedAt": "2026-04-10T21:20:13.363Z",
-                                            "createdAt": "2026-03-27T19:34:35.556Z",
-                                            "url": "/api/media/file/forest-2-cropped.png",
+                                            "id": 40,
+                                            "alt": "Early Sketches of the Isolation Proof bottle",
+                                            "tags": [
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 1.2941176470588236,
+                                            "updatedAt": "2026-04-13T16:06:55.568Z",
+                                            "createdAt": "2026-04-13T16:06:55.568Z",
+                                            "url": "/api/media/file/Isolation%20Proof%20Sketches",
                                             "thumbnailURL": null,
-                                            "filename": "forest-2-cropped.png",
-                                            "mimeType": "image/png",
-                                            "filesize": 1945576,
-                                            "width": 1587,
-                                            "height": 893
-                                        }
-                                    },
-                                    {
-                                        "id": "69c809c5437c98fbc69507d3",
-                                        "image": {
-                                            "id": 1,
-                                            "alt": "Robot protagonist from Xenoplanet aiming at an enemy in the distance!",
-                                            "tags": [],
-                                            "aspectRatio": 2.034181240063593,
-                                            "updatedAt": "2026-04-09T22:12:16.337Z",
-                                            "createdAt": "2026-03-27T18:48:55.505Z",
-                                            "url": "/api/media/file/aiming-at-enemy.png",
-                                            "thumbnailURL": null,
-                                            "filename": "aiming-at-enemy.png",
-                                            "mimeType": "image/png",
-                                            "filesize": 3842241,
-                                            "width": 2559,
-                                            "height": 1258
-                                        }
+                                            "filename": "Isolation Proof Sketches",
+                                            "mimeType": "image/avif",
+                                            "filesize": 105214,
+                                            "width": 1650,
+                                            "height": 1275
+                                        },
+                                        "caption": "Early sketches of the Isolation Proof bottle from Laazy Studio"
                                     }
                                 ],
                                 "blockType": "image-set"
@@ -125,104 +157,7 @@
                                     "format": 0,
                                     "mode": "normal",
                                     "style": "",
-                                    "text": "Technical Details",
-                                    "type": "text",
-                                    "version": 1
-                                }
-                            ],
-                            "direction": null,
-                            "format": "",
-                            "indent": 0,
-                            "type": "heading",
-                            "version": 1,
-                            "tag": "h2"
-                        },
-                        {
-                            "children": [
-                                {
-                                    "detail": 0,
-                                    "format": 0,
-                                    "mode": "normal",
-                                    "style": "",
-                                    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-                                    "type": "text",
-                                    "version": 1
-                                }
-                            ],
-                            "direction": null,
-                            "format": "",
-                            "indent": 0,
-                            "type": "paragraph",
-                            "version": 1,
-                            "textFormat": 0,
-                            "textStyle": ""
-                        },
-                        {
-                            "children": [
-                                {
-                                    "detail": 0,
-                                    "format": 0,
-                                    "mode": "normal",
-                                    "style": "",
-                                    "text": "Subheading",
-                                    "type": "text",
-                                    "version": 1
-                                }
-                            ],
-                            "direction": null,
-                            "format": "",
-                            "indent": 0,
-                            "type": "heading",
-                            "version": 1,
-                            "tag": "h3"
-                        },
-                        {
-                            "children": [
-                                {
-                                    "detail": 0,
-                                    "format": 0,
-                                    "mode": "normal",
-                                    "style": "",
-                                    "text": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?",
-                                    "type": "text",
-                                    "version": 1
-                                }
-                            ],
-                            "direction": null,
-                            "format": "",
-                            "indent": 0,
-                            "type": "paragraph",
-                            "version": 1,
-                            "textFormat": 0,
-                            "textStyle": ""
-                        },
-                        {
-                            "children": [
-                                {
-                                    "detail": 0,
-                                    "format": 0,
-                                    "mode": "normal",
-                                    "style": "",
-                                    "text": "Subheading 2",
-                                    "type": "text",
-                                    "version": 1
-                                }
-                            ],
-                            "direction": null,
-                            "format": "",
-                            "indent": 0,
-                            "type": "heading",
-                            "version": 1,
-                            "tag": "h3"
-                        },
-                        {
-                            "children": [
-                                {
-                                    "detail": 0,
-                                    "format": 0,
-                                    "mode": "normal",
-                                    "style": "",
-                                    "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+                                    "text": "These early sketches provided by Laazy Studio outlined the basic shape of the bottle, embossed details, and the labels that would adorn it. I used Rhino to create a model of the glass based on these sketches and brought it into Blender to quickly add the embossed details and labels. I then setup a simple environment and rendered a visualization of the design for client approval.     ",
                                     "type": "text",
                                     "version": 1
                                 }
@@ -240,66 +175,149 @@
                             "version": 2,
                             "format": "",
                             "fields": {
-                                "id": "69cb1b2e1d45bb96be364ae3",
+                                "id": "69dd19d21f96e82745a576b4",
                                 "blockName": "",
                                 "images": [
                                     {
-                                        "id": "69cb1b98ea8c8f7e2dd36121",
+                                        "id": "69dd19d41633bbd33e90832e",
                                         "image": {
-                                            "id": 2,
-                                            "alt": "Forest",
-                                            "tags": [],
-                                            "aspectRatio": 1.7771556550951848,
-                                            "updatedAt": "2026-04-10T21:20:13.363Z",
-                                            "createdAt": "2026-03-27T19:34:35.556Z",
-                                            "url": "/api/media/file/forest-2-cropped.png",
+                                            "id": 41,
+                                            "alt": "Rendering if the Isolation Proof bottle",
+                                            "tags": [
+                                                "rendering",
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 0.7503030303030302,
+                                            "updatedAt": "2026-04-13T16:37:49.809Z",
+                                            "createdAt": "2026-04-13T16:37:49.809Z",
+                                            "url": "/api/media/file/IP%20Renders-4.avif",
                                             "thumbnailURL": null,
-                                            "filename": "forest-2-cropped.png",
-                                            "mimeType": "image/png",
-                                            "filesize": 1945576,
-                                            "width": 1587,
-                                            "height": 893
+                                            "filename": "IP Renders-4.avif",
+                                            "mimeType": "image/avif",
+                                            "filesize": 209106,
+                                            "width": 1238,
+                                            "height": 1650
                                         }
                                     },
                                     {
-                                        "id": "69cb1b9cea8c8f7e2dd36123",
+                                        "id": "69dd1be41633bbd33e90832f",
                                         "image": {
-                                            "id": 3,
-                                            "alt": "forest and a campfire in the middle ",
-                                            "tags": [],
-                                            "aspectRatio": 1.8158765159867696,
-                                            "updatedAt": "2026-04-09T22:11:53.475Z",
-                                            "createdAt": "2026-03-27T19:35:00.237Z",
-                                            "url": "/api/media/file/forest-and-campfire.png",
+                                            "id": 42,
+                                            "alt": "Rendering if the Isolation Proof bottle",
+                                            "tags": [
+                                                "rendering",
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 0.7503030303030302,
+                                            "updatedAt": "2026-04-13T16:38:48.239Z",
+                                            "createdAt": "2026-04-13T16:38:48.239Z",
+                                            "url": "/api/media/file/IP%20Renders-1.avif",
                                             "thumbnailURL": null,
-                                            "filename": "forest-and-campfire.png",
-                                            "mimeType": "image/png",
-                                            "filesize": 3519472,
-                                            "width": 1647,
-                                            "height": 907
+                                            "filename": "IP Renders-1.avif",
+                                            "mimeType": "image/avif",
+                                            "filesize": 261502,
+                                            "width": 1238,
+                                            "height": 1650
                                         }
                                     },
                                     {
-                                        "id": "69cb1ba1ea8c8f7e2dd36125",
+                                        "id": "69dd1c561633bbd33e908330",
                                         "image": {
-                                            "id": 1,
-                                            "alt": "Robot protagonist from Xenoplanet aiming at an enemy in the distance!",
-                                            "tags": [],
-                                            "aspectRatio": 2.034181240063593,
-                                            "updatedAt": "2026-04-09T22:12:16.337Z",
-                                            "createdAt": "2026-03-27T18:48:55.505Z",
-                                            "url": "/api/media/file/aiming-at-enemy.png",
+                                            "id": 45,
+                                            "alt": "Rendering if the Isolation Proof bottle",
+                                            "tags": [
+                                                "rendering",
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 0.7496969696969698,
+                                            "updatedAt": "2026-04-13T16:39:39.743Z",
+                                            "createdAt": "2026-04-13T16:39:39.743Z",
+                                            "url": "/api/media/file/IP%20Renders-6.avif",
                                             "thumbnailURL": null,
-                                            "filename": "aiming-at-enemy.png",
-                                            "mimeType": "image/png",
-                                            "filesize": 3842241,
-                                            "width": 2559,
-                                            "height": 1258
+                                            "filename": "IP Renders-6.avif",
+                                            "mimeType": "image/avif",
+                                            "filesize": 168766,
+                                            "width": 1237,
+                                            "height": 1650
                                         }
                                     }
                                 ],
-                                "force-aspect": 1.64,
-                                "blockType": "image-gallery"
+                                "blockType": "image-set"
+                            }
+                        },
+                        {
+                            "type": "block",
+                            "version": 2,
+                            "format": "",
+                            "fields": {
+                                "id": "69dd1c6a1f96e82745a576b7",
+                                "blockName": "",
+                                "images": [
+                                    {
+                                        "id": "69dd1c6b1633bbd33e908331",
+                                        "image": {
+                                            "id": 46,
+                                            "alt": "Rendering if the Isolation Proof bottle",
+                                            "tags": [
+                                                "rendering",
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 0.7496969696969698,
+                                            "updatedAt": "2026-04-13T16:39:40.168Z",
+                                            "createdAt": "2026-04-13T16:39:40.168Z",
+                                            "url": "/api/media/file/IP%20Renders-2.avif",
+                                            "thumbnailURL": null,
+                                            "filename": "IP Renders-2.avif",
+                                            "mimeType": "image/avif",
+                                            "filesize": 280974,
+                                            "width": 1237,
+                                            "height": 1650
+                                        }
+                                    },
+                                    {
+                                        "id": "69dd1c751633bbd33e908332",
+                                        "image": {
+                                            "id": 43,
+                                            "alt": "Rendering if the Isolation Proof bottle",
+                                            "tags": [
+                                                "rendering",
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 0.7496969696969698,
+                                            "updatedAt": "2026-04-13T16:39:39.023Z",
+                                            "createdAt": "2026-04-13T16:39:39.023Z",
+                                            "url": "/api/media/file/IP%20Renders-3.avif",
+                                            "thumbnailURL": null,
+                                            "filename": "IP Renders-3.avif",
+                                            "mimeType": "image/avif",
+                                            "filesize": 105833,
+                                            "width": 1237,
+                                            "height": 1650
+                                        }
+                                    },
+                                    {
+                                        "id": "69dd1c981633bbd33e908333",
+                                        "image": {
+                                            "id": 44,
+                                            "alt": "Rendering if the Isolation Proof bottle",
+                                            "tags": [
+                                                "rendering",
+                                                "isolation proof"
+                                            ],
+                                            "aspectRatio": 0.7503030303030302,
+                                            "updatedAt": "2026-04-13T16:39:39.393Z",
+                                            "createdAt": "2026-04-13T16:39:39.393Z",
+                                            "url": "/api/media/file/IP%20Renders-5.avif",
+                                            "thumbnailURL": null,
+                                            "filename": "IP Renders-5.avif",
+                                            "mimeType": "image/avif",
+                                            "filesize": 135741,
+                                            "width": 1238,
+                                            "height": 1650
+                                        }
+                                    }
+                                ],
+                                "blockType": "image-set"
                             }
                         },
                         {
@@ -325,13 +343,13 @@
                 "metaDescription": null,
                 "ogImage": null
             },
-            "updatedAt": "2026-03-31T00:56:23.169Z",
-            "createdAt": "2026-03-28T17:10:24.017Z"
+            "updatedAt": "2026-04-13T16:47:15.956Z",
+            "createdAt": "2026-04-13T16:03:45.941Z"
         }
     ],
     "hasNextPage": false,
     "hasPrevPage": false,
-    "limit": 1,
+    "limit": 10,
     "nextPage": null,
     "page": 1,
     "pagingCounter": 1,

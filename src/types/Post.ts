@@ -67,7 +67,7 @@ export type BlockLevelNode = ParagraphNode | HeadingNode | BlockNode;
 
 export interface ParagraphNode {
     type: "paragraph";
-    children: TextNode[];
+    children: InlineNode[];
     direction: string | null;
     format: string;
     indent: number;
@@ -95,6 +95,23 @@ export interface TextNode {
     style: string;
     version: number;
 }
+
+export interface LinkNode {
+    type: "link";
+    id: string;
+    children: TextNode[];
+    direction: string | null;
+    format: string;
+    indent: number;
+    version: number;
+    fields: {
+        url: string;
+        newTab?: boolean;
+        linkType: string;
+    };
+}
+
+export type InlineNode = TextNode | LinkNode;
 
 // --- Custom Blocks ---
 

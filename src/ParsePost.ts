@@ -5,6 +5,7 @@ import type {
     SEO,
     BlockLevelNode,
     TextNode,
+    InlineNode,
     ImageSetItem,
     Content,
 } from "./types/Post.ts";
@@ -59,6 +60,26 @@ function parseTextNode(raw: Raw): TextNode {
     };
 }
 
+function parseInlineNode(raw: Raw): InlineNode {
+    if (raw.type === "link") {
+        return {
+            type: "link",
+            id: raw.id,
+            children: (raw.children as Raw[]).map(parseTextNode),
+            direction: raw.direction ?? null,
+            format: raw.format,
+            indent: raw.indent,
+            version: raw.version,
+            fields: {
+                url: raw.fields.url,
+                newTab: raw.fields.newTab ?? false,
+                linkType: raw.fields.linkType,
+            },
+        };
+    }
+    return parseTextNode(raw);
+}
+
 function parseImageSetItem(raw: Raw): ImageSetItem {
     return {
         id: raw.id,
@@ -72,7 +93,7 @@ function parseBlockLevelNode(raw: Raw): BlockLevelNode {
         case "paragraph":
             return {
                 type: "paragraph",
-                children: (raw.children as Raw[]).map(parseTextNode),
+                children: (raw.children as Raw[]).map(parseInlineNode),
                 direction: raw.direction ?? null,
                 format: raw.format,
                 indent: raw.indent,
