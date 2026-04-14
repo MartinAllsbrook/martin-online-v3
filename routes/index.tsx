@@ -11,7 +11,7 @@ export default define.page(function Home(_ctx) {
         }} index={[
             { name: "work", href: "work" },
             { name: "about", href: "about" },
-            { name: "contact", href: "contact" },
+            // { name: "contact", href: "contact" },
             { name: "github", href: "https://github.com/martinallsbrook", external: true },
             { name: "linkedin", href: "https://www.linkedin.com/in/martin-allsbrook/", external: true },
             { name: "youtube", href: "https://www.youtube.com/@martinibomb", external: true },
