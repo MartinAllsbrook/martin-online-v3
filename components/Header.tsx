@@ -16,7 +16,8 @@ export default function Header({ index, route }: { index: LinkInfo[], route: Lin
                     ))}
                 </h5>
             </div>
-            <div class="absolute pt-4">
+            {/* Index Links */}
+            <div class="absolute pt-4 hidden xl:block">
                 {index.map((link) => (
                     <h5 key={link.href}>
                         <a href={link.href} target={link.external ? "_blank" : "_self"} rel={link.external ? "noopener noreferrer" : undefined}>
