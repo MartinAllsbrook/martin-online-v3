@@ -31,9 +31,12 @@ export default function PageWrap({ children, index, route, head }: PageWrapProps
 
             {/* Page Content */}
             <div class="relative max-w-screen">
-                <div class="mx-8 flex flex-col min-h-screen">
+                <div class="flex flex-col min-h-screen">
+                    {/* Header */}
                     <Header index={index} route={route} />
-                    <div class="flex flex-row relative flex-1">
+
+                    {/* Main Content */}
+                    <div class="mx-8 flex flex-row relative flex-1">
                         <div class="grow flex-1">
                             {/* Left spacer */}
                         </div>
@@ -45,6 +48,8 @@ export default function PageWrap({ children, index, route, head }: PageWrapProps
                             {/* Right spacer */}
                         </div>
                     </div>
+
+                    {/* Footer */}
                     <Footer />
                 </div>
             </div>
