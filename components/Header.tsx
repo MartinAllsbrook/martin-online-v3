@@ -2,7 +2,7 @@ import LinkInfo from "src/types/LinkInfo.ts";
 
 export default function Header({ index, route }: { index: LinkInfo[], route: LinkInfo[] }) {
     return (
-        <header class="mb-4 border-white border-b sticky top-0 z-10 bg-neutral-900/80 backdrop-blur-sm">
+        <header class="mb-4 border-white border-b sticky top-0 z-10 bg-neutral-900/80 backdrop-blur-sm" style="padding-top: env(safe-area-inset-top)">
             <div class="py-4">
                 <h5 class="font-semibold">
                     <a href="https://martinallsbrook.com">martinallsbrook.com</a>
